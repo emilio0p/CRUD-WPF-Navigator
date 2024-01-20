@@ -8,6 +8,36 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page1">
 
+    <Page.Resources>
+        <Style x:Key="PlaceholderTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            SnapsToDevicePixels="true"/>
+                            <ScrollViewer x:Name="PART_ContentHost" 
+                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            <TextBlock x:Name="Placeholder" 
+                               Text="{TemplateBinding Tag}" 
+                               Foreground="Gray"
+                               Visibility="Collapsed"
+                                       Margin="2"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter TargetName="Placeholder" Property="Visibility" Value="Visible"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Page.Resources>
+
     <Grid Background="White">
 
         <Grid.RowDefinitions>
@@ -30,13 +60,14 @@
 
         <Button Grid.Row="0" Grid.Column="0" Content="Agregar/Borrar/Editar producto"/>
 
-        <ComboBox Grid.Row="0" Grid.Column="1" Name="listaCategorias" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="165">
-            <ComboBoxItem Content="Selecciona una categoría" Name="catPorDefecto" IsSelected="True" ></ComboBoxItem>
+        <ComboBox Grid.Row="0" Grid.Column="1" Name="listaCategorias" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="165" SelectionChanged="listaCategorias_SelectionChanged">
+            <ComboBoxItem Content="Selecciona una categoría" Name="catPorDefecto" IsSelected="True"></ComboBoxItem>
             <!-- Se llenará automáticamente con las categorías de la base de datos-->
         </ComboBox>
 
         <!-- Contenido de la primera fila y segunda columna -->
-        <DataGrid x:Name="tablaProductos" AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198">
+        <DataGrid x:Name="tablaProductos" AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" 
+                  Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198" SelectionChanged="tablaProductos_SelectionChanged">
             <!-- Contenido del DataGrid -->
         </DataGrid>
 
@@ -52,8 +83,9 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Text="Buscar producto" Grid.Row="0" Style="{StaticResource PoppinsFontBold}"></TextBlock>
-            <TextBox Grid.Row="1" Grid.Column="0" Text="Buscar..." Width="100" Height="20"></TextBox>
-            <Button Grid.Row="1" Grid.Column="1" Content="Enviar" Margin="10"></Button>
+            <TextBox x:Name="txtBuscar" Grid.Row="1" Grid.Column="0" Width="100" Height="20" Style="{StaticResource PlaceholderTextBoxStyle}" 
+         Tag="Buscar nombre..."></TextBox>
+            <Button Name="btnBuscar" Click="btnBuscar_Click" Grid.Row="1" Grid.Column="1" Content="Enviar" Margin="10"></Button>
         </Grid>
 
 

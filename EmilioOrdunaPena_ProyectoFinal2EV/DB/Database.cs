@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -63,7 +64,6 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.DB
 
         public static void rellenarTablaProductos(DataGrid dataGrid)
         {
-            List<String> listaCat = new List<string>();
             conexion.Open();
             
             String consultaProd = "SELECT * FROM productos;";
@@ -71,6 +71,30 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.DB
             DataTable dataTable = new DataTable();
             mySqlDataAdapter.Fill(dataTable);
             dataGrid.ItemsSource = dataTable.DefaultView;
+            conexion.Close();
+        }
+
+        public static void buscarProducto(DataGrid dataGrid, String busqueda)
+        {
+            conexion.Open();
+
+            String consultaProd = "SELECT * FROM productos WHERE nombre LIKE \"" + busqueda + "%\" ;";
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(consultaProd, conexion);
+            DataTable dataTable = new DataTable();
+            mySqlDataAdapter.Fill(dataTable);
+            dataGrid.ItemsSource = dataTable.DefaultView;
+            conexion.Close();
+        }
+
+        public static void mostrarPorCategoria(DataGrid dataGrid, String categoria)
+        {
+            conexion.Open();
+
+            String consulta = "SELECT * FROM productos WHERE id_categoria = (SELECT id_categoria FROM categorias WHERE nombre=\"" + categoria + "\");";
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(consulta, conexion);
+            DataTable dataTable = new DataTable();
+            mySqlDataAdapter.Fill(dataTable);
+            dataGrid.ItemsSource= dataTable.DefaultView;
             conexion.Close();
         }
     }

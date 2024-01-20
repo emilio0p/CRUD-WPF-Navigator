@@ -19,9 +19,19 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        String username;
+        public MainWindow(String username)
         {
             InitializeComponent();
+            Loaded += TuVentanaPrincipal_Loaded;
+            this.username = username;
+        }
+
+        // Cargar una página inicialmente
+        private void TuVentanaPrincipal_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Establecer la página inicial aquí
+            mainFrame.NavigationService.Navigate(new Home(username));
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -74,9 +84,11 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
         {
             if (!(mainFrame.Content is Page1))
             {
-                // Si no está navegando a la página 1, entonces navega
-                mainFrame.Navigate(new Page1());
+                mainFrame.Navigate(new Page1());   
             }
         }
+
+        
     }
 }
+

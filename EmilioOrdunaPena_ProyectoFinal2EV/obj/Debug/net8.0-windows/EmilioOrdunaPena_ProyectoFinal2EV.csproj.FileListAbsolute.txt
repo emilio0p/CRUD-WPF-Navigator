@@ -38,3 +38,8 @@ C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_P
 C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\EmilioOrdunaPena_ProyectoFinal2EV.pdb
 C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\EmilioOrdunaPena_ProyectoFinal2EV.genruntimeconfig.cache
 C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\ref\EmilioOrdunaPena_ProyectoFinal2EV.dll
+C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\EmilioOrdunaPena_ProyectoFinal2EV.sourcelink.json
+C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\Pages\Home.g.cs
+C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\Pages\Home.baml
+C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\CRUDWindow.g.cs
+C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\obj\Debug\net8.0-windows\CRUDWindow.baml

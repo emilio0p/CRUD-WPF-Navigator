@@ -49,7 +49,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
             {
                 if(DB.Database.LogIn(user, pass)){
                     txtFalloInicio.Visibility = Visibility.Collapsed;
-                    MainWindow mainWindow = new MainWindow();
+                    MainWindow mainWindow = new MainWindow(user);
                     mainWindow.Show();
                     this.Close();
                 } else
