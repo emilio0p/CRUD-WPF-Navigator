@@ -16,6 +16,7 @@
     <None Remove="Media\edit.png" />
     <None Remove="Media\logo.png" />
     <None Remove="Media\logout.png" />
+    <None Remove="Media\stats.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +43,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Media\logout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Media\stats.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

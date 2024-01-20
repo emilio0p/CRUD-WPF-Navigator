@@ -19,6 +19,9 @@
     <Compile Update="Pages\Page1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Page2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CRUDWindow.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Page1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Page2.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

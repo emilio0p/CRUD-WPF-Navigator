@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmilioOrdunaPena_ProyectoFinal2EV"
         mc:Ignorable="d"
-        Title="CRUDWindow" Height="303" Width="1574">
+        Icon="/Media/logo.png"
+        Title="Detalles registro" Height="329" Width="1506">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -17,12 +18,23 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <!-- Controles para mostrar detalles del producto -->
-        <TextBox x:Name="txtNombre" Height="250" Grid.Column="0" Text="Nombre del producto" FontSize="20" Margin="10,10,10,10" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="txtDesc" Height="250" Grid.Column="1" Text="Descripción del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
-        <TextBox x:Name="txtPrecio" Height="250" Grid.Column="2" Text="Precio del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
-        <TextBox x:Name="txtImagen" Height="250" Grid.Column="3" Text="Imagen del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
-        <TextBox x:Name="txtStock" Height="250" Grid.Column="4" Text="Stock del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
-        <TextBox x:Name="txtCategoria" Height="250" Grid.Column="5" Text="Categoria del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock Text="Nombre:" Grid.Column="0" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox TextChanged="txtNombre_TextChanged" x:Name="txtNombre" Height="250" Grid.Column="0" Text="Nombre del producto" FontSize="20" Margin="10,10,10,10" TextWrapping="Wrap" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+
+        <TextBlock Text="Descripción:" Grid.Column="1" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox x:Name="txtDesc" TextChanged="txtNombre_TextChanged" Height="250" Grid.Column="1" Text="Descripción del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock Text="Precio:" Grid.Column="2" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox x:Name="txtPrecio" TextChanged="txtNombre_TextChanged" Height="250" Grid.Column="2" Text="Precio del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock Text="Imagen:" Grid.Column="3" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox x:Name="txtImagen" TextChanged="txtNombre_TextChanged" Height="250" Grid.Column="3" Text="Imagen del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock Text="Unidades en stock:" Grid.Column="4" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox x:Name="txtStock" TextChanged="txtNombre_TextChanged" Height="250" Grid.Column="4" Text="Stock del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock Text="Id categoria:" Grid.Column="5" HorizontalAlignment="Center" Style="{StaticResource PoppinsFontSemiBold}"></TextBlock>
+        <TextBox x:Name="txtCategoria" TextChanged="txtNombre_TextChanged" Height="250" Grid.Column="5" Text="Categoria del producto" Margin="10,10,10,10" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
         <!-- Otros controles según tus propiedades -->
 
         <!-- Botones adicionales u otras interacciones -->
@@ -31,8 +43,8 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-            <Button x:Name="btnGuardar" Grid.Row="0" Content="Guardar cambios" Margin="10" Click="btnGuardar_Click"></Button>
-            <Button x:Name="btnBorrar" Grid.Row="1" Content="Borrar registro" Margin="10" Click="btnBorrar_Click"></Button>
+            <Button x:Name="btnGuardar" Grid.Row="1" Content="Guardar cambios" Margin="10" Click="btnGuardar_Click" Style="{StaticResource PoppinsFontBold}" Background="LightGreen" ></Button>
+            <Button x:Name="btnBorrar" Grid.Row="0" Content="Borrar registro" Margin="10" Click="btnBorrar_Click" Style="{StaticResource PoppinsFontBold}" Background="IndianRed" Height="50"></Button>
         </Grid>
 
     </Grid>

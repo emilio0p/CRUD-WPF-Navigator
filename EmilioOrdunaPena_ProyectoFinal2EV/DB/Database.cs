@@ -97,5 +97,43 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.DB
             dataGrid.ItemsSource= dataTable.DefaultView;
             conexion.Close();
         }
+
+        public static void actualizarProducto(long id, string? nombre, string? desc, float precio, string? imagen, int stock, int categoria)
+        {
+            conexion.Open();
+
+            string consulta = "UPDATE productos SET nombre = @Nombre, descripcion = @Descripcion, precio = @Precio, imagen_ref = @Imagen, unidades_stock = @Stock, id_categoria = @Categoria WHERE id_producto = @Id";
+
+            MySqlCommand cmd = new MySqlCommand(consulta, conexion);
+
+            cmd.Parameters.AddWithValue("@Nombre", nombre);
+            cmd.Parameters.AddWithValue("@Descripcion", desc);
+            cmd.Parameters.AddWithValue("@Precio", precio);
+            cmd.Parameters.AddWithValue("@Imagen", imagen);
+            cmd.Parameters.AddWithValue("@Stock", stock);
+            cmd.Parameters.AddWithValue("@Categoria", categoria);
+            cmd.Parameters.AddWithValue("@Id", id);
+
+            cmd.ExecuteNonQuery();
+
+            conexion.Close();
+
+
+        }
+
+        public static void borrarProducto(long id)
+        {
+            conexion.Open();
+
+            string consulta = "DELETE FROM productos WHERE id_producto = @Id";
+
+            MySqlCommand cmd = new MySqlCommand(consulta, conexion);
+
+            cmd.Parameters.AddWithValue("@Id", id);
+
+            cmd.ExecuteNonQuery();
+
+            conexion.Close();
+        }
     }
 }

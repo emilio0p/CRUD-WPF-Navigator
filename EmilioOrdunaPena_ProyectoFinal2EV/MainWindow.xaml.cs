@@ -88,7 +88,10 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
             }
         }
 
-        
+        private void BtnConsultasClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
