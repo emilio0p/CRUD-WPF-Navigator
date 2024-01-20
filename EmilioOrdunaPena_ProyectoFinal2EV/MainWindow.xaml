@@ -1,0 +1,120 @@
+﻿<Window x:Class="EmilioOrdunaPena_ProyectoFinal2EV.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmilioOrdunaPena_ProyectoFinal2EV"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="681" Width="1052" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+
+    <Canvas Margin="40,33,39,33">
+        <Canvas>
+            <Border BorderBrush="Black" BorderThickness="0.5" Background="#FFC5C5C5" RenderTransformOrigin="0.5,0.5" Height="23" Canvas.Top="-15" Width="51" CornerRadius="10,10,10,10" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <Button Width="12" 
+        Height="12" Canvas.Left="11" Canvas.Top="-13" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CloseButton_Click" BorderBrush="#FFF1F1F1">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Stroke="#7D1B19"
+                         StrokeThickness="1">
+                                <Ellipse.Fill>
+                                    <RadialGradientBrush>
+                                        <GradientStop Offset="0"
+                                          Color="#FF605C" />
+                                        <GradientStop Offset="1"
+                                          Color="#FF605C" />
+                                        <GradientStop Offset="1"
+                                          Color="#FF605C" />
+                                        <RadialGradientBrush.Transform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleY="0.65" />
+                                            </TransformGroup>
+                                        </RadialGradientBrush.Transform>
+                                    </RadialGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Width="12" 
+Height="12" Canvas.Left="28" Canvas.Top="-13" HorizontalAlignment="Left" VerticalAlignment="Center" Click="MinimizeButton_Click" BorderBrush="#FFF1F1F1">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Stroke="#7F5B1A"
+                 StrokeThickness="1">
+                                <Ellipse.Fill>
+                                    <RadialGradientBrush>
+                                        <GradientStop Offset="0"
+                                  Color="#FFBD44" />
+                                        <GradientStop Offset="1"
+                                  Color="#FFBD44" />
+                                        <GradientStop Offset="1"
+                                  Color="#FFBD44" />
+                                        <RadialGradientBrush.Transform>
+                                            <TransformGroup>
+                                                <ScaleTransform ScaleY="0.65" />
+                                            </TransformGroup>
+                                        </RadialGradientBrush.Transform>
+                                    </RadialGradientBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <ContentPresenter HorizontalAlignment="Center"
+                          VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Canvas>
+        <Border CornerRadius="10" Background="White" Height="622" Width="985">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15"
+               Direction ="-90" 
+               RenderingBias ="Quality" 
+               ShadowDepth ="2" 
+               Color ="Gray" />
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Menú de navegación en la parte izquierda -->
+                <StackPanel Grid.Column="0" Background="LightGray">
+                    <Image Source="/Media/logo.png" Height="102" Width="102" Margin="5,5,5,5"></Image>
+                    <Button BorderBrush="Transparent" Click="NavigateToPage1" Margin="0,10,0,20" Background="Transparent">
+                        <Image Source="/Media/edit.png" Height="40" Width="40"></Image>
+                    </Button>
+                    <Button BorderBrush="Transparent" Click="BtnLogout_Click" Background="Transparent">
+                        <Image Source="/Media/logout.png" Height="40" Width="40"></Image>
+                    </Button>
+
+
+
+                    <Button BorderBrush="Transparent" Background="Transparent"/>
+
+                    <Button BorderBrush="Transparent" Background="Transparent"/>
+                </StackPanel>
+
+                <!-- Contenido principal (Frame) -->
+                <Frame x:Name="mainFrame" Grid.Column="1"/>
+            </Grid>
+        </Border>
+    </Canvas>
+
+</Window>

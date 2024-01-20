@@ -1,0 +1,19 @@
+﻿<Application x:Class="EmilioOrdunaPena_ProyectoFinal2EV.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EmilioOrdunaPena_ProyectoFinal2EV"
+             StartupUri="Login.xaml">
+    <Application.Resources>
+        <Style x:Key="PoppinsFontBold">
+            <Setter Property="TextElement.FontFamily" Value="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-ExtraBold.ttf#Poppins" />
+        </Style>
+
+        <Style x:Key="PoppinsFontRegular">
+            <Setter Property="TextElement.FontFamily" Value="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-Regular.ttf#Poppins" />
+        </Style>
+
+        <Style x:Key="PoppinsFontSemiBold">
+            <Setter Property="TextElement.FontFamily" Value="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins" />
+        </Style>
+    </Application.Resources>
+</Application>

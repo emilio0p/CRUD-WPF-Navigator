@@ -1,0 +1,61 @@
+﻿<Page x:Class="EmilioOrdunaPena_ProyectoFinal2EV.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EmilioOrdunaPena_ProyectoFinal2EV.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <!-- Primera fila -->
+            <RowDefinition Height="*"/>
+            <!-- Segunda fila -->
+            <RowDefinition Height="*"/>
+            <!-- Tercera fila -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <!-- Primera columna -->
+            <ColumnDefinition Width="*"/>
+            <!-- Segunda columna -->
+            <ColumnDefinition Width="*"/>
+            <!-- Tercera columna -->
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Content="Agregar/Borrar/Editar producto"/>
+
+        <ComboBox Grid.Row="0" Grid.Column="1" Name="listaCategorias" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="165">
+            <ComboBoxItem Content="Selecciona una categoría" Name="catPorDefecto" IsSelected="True" ></ComboBoxItem>
+            <!-- Se llenará automáticamente con las categorías de la base de datos-->
+        </ComboBox>
+
+        <!-- Contenido de la primera fila y segunda columna -->
+        <DataGrid x:Name="tablaProductos" AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198">
+            <!-- Contenido del DataGrid -->
+        </DataGrid>
+
+        <!-- Contenido de la primera fila y tercera columna -->
+        <Grid Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Buscar producto" Grid.Row="0" Style="{StaticResource PoppinsFontBold}"></TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="Buscar..." Width="100" Height="20"></TextBox>
+            <Button Grid.Row="1" Grid.Column="1" Content="Enviar" Margin="10"></Button>
+        </Grid>
+
+
+    </Grid>
+</Page>
