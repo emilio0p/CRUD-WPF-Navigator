@@ -132,8 +132,8 @@ Height="12" Canvas.Left="278" Canvas.Top="12" HorizontalAlignment="Left" Vertica
                 </Grid>
                 <TextBlock
                     HorizontalAlignment="Right"/>
-                
-                
+
+
                 <Button x:Name="LoginBtn" 
         Click="LoginBtn_Click"
         Content="Iniciar sesión" 
@@ -168,8 +168,8 @@ Height="12" Canvas.Left="278" Canvas.Top="12" HorizontalAlignment="Left" Vertica
                     </Button.Style>
                 </Button>
 
-
-                <TextBlock x:Name="txtFalloInicio" Foreground="Red" TextWrapping="Wrap" Text="Usuario o contraseña incorrectos" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                <TextBlock x:Name="txtFalloInicio" Foreground="Red" TextWrapping="Wrap" Text="Usuario o contraseña incorrectos" HorizontalAlignment="Center" Visibility="Collapsed"
+                           Style="{StaticResource PoppinsFontRegular}"/>
             </StackPanel>
         </Border>
 

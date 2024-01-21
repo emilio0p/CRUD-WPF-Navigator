@@ -46,7 +46,6 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
                 string des = txtDesc.Text;
                 int units = Convert.ToInt32(txtStock.Text);
                 float price = float.Parse(txtPrecio.Text);
-
                 Database.actualizarProducto(id, name, des, price, img, units, cate);
                 this.Close();
             } else
