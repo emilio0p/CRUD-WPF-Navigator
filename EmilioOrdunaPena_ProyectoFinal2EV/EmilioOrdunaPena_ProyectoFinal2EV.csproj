@@ -13,7 +13,9 @@
     <None Remove="Fonts\Poppins-ExtraBold.ttf" />
     <None Remove="Fonts\Poppins-Regular.ttf" />
     <None Remove="Fonts\Poppins-SemiBold.ttf" />
+    <None Remove="Media\customer.png" />
     <None Remove="Media\edit.png" />
+    <None Remove="Media\home.png" />
     <None Remove="Media\logo.png" />
     <None Remove="Media\logout.png" />
     <None Remove="Media\stats.png" />
@@ -36,7 +38,13 @@
     <Resource Include="Fonts\Poppins-SemiBold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Media\customer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Media\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Media\home.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Media\logo.png">

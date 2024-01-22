@@ -91,5 +91,11 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
                 detallesWindow.ShowDialog();
             }
         }
+
+        private void btnAgregarRegistro_Click(object sender, RoutedEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow();
+            addWindow.ShowDialog();
+        }
     }
 }

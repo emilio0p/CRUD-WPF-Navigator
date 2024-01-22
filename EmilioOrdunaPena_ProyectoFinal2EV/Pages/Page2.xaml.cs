@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmilioOrdunaPena_ProyectoFinal2EV.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
         public Page2()
         {
             InitializeComponent();
+        }
+
+        private void btnConsulta1_Click(object sender, RoutedEventArgs e)
+        {
+            Database.rellenarProductosMasVendidos(tablaProductos2);
+        }
+
+        private void btnConsulta2_Click(object sender, RoutedEventArgs e)
+        {
+            Database.rellenarProductosSinStock(tablaProductos2);
+        }
+
+        private void btnConsulta3_Click(object sender, RoutedEventArgs e)
+        {
+            Database.rellenarProductosMasCaros(tablaProductos2);
         }
     }
 }

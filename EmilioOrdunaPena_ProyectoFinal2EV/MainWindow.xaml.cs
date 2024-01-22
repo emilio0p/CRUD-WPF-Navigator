@@ -80,6 +80,14 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
             
         }
 
+        private void NavigateToHome(object sender, RoutedEventArgs e)
+        {
+            if (!(mainFrame.Content is Home))
+            {
+                mainFrame.Navigate(new Home(username));
+            }
+        }
+
         private void NavigateToPage1(object sender, RoutedEventArgs e)
         {
             if (!(mainFrame.Content is Page1))
@@ -88,9 +96,20 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
             }
         }
 
-        private void BtnConsultasClick(object sender, RoutedEventArgs e)
+        private void NavigateToPage2(object sender, RoutedEventArgs e)
         {
+            if(!(mainFrame.Content is Page2))
+            {
+                mainFrame.Navigate(new Page2());
+            }
+        }
 
+        private void NavigateToPage3(object sender, RoutedEventArgs e)
+        {
+            if (!(mainFrame.Content is Clientes))
+            {
+                mainFrame.Navigate(new Clientes());
+            }
         }
     }
 }

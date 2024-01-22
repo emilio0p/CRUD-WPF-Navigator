@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\emili\source\repos\EmilioOrdunaPena_ProyectoFinal2EV\EmilioOrdunaPena_ProyectoFinal2EV\App.xaml
-6-629019565
+81391585791
 
-12-1026813003
+14-214230042
 206-197748359
-CRUDWindow.xaml;Login.xaml;MainWindow.xaml;Pages\Home.xaml;Pages\Page1.xaml;Pages\Page2.xaml;
+AddWindow.xaml;CRUDWindow.xaml;Login.xaml;MainWindow.xaml;Pages\Clientes.xaml;Pages\Home.xaml;Pages\Page1.xaml;Pages\Page2.xaml;
 
 True
 

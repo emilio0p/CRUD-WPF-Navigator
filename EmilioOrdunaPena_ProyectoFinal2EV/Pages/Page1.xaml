@@ -43,32 +43,20 @@
     <Grid Background="White">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <!-- Primera fila -->
+            <RowDefinition Height="0.6*"/>
             <RowDefinition Height="*"/>
-            <!-- Segunda fila -->
             <RowDefinition Height="*"/>
-            <!-- Tercera fila -->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <!-- Primera columna -->
             <ColumnDefinition Width="*"/>
-            <!-- Segunda columna -->
             <ColumnDefinition Width="*"/>
-            <!-- Tercera columna -->
         </Grid.ColumnDefinitions>
 
         <Button x:Name="btnAgregarRegistro" 
-Content="Agregar registro" 
-Foreground="White"
-Background="#FF80B198"
-Margin="0,25"
-Height="35"
-Width="250"
-                Grid.Row="0" Grid.Column="0"
-FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
+                Click="btnAgregarRegistro_Click" Content="Agregar registro"  Foreground="White" Background="#FF80B198" Margin="0,25" Height="35" Width="250"
+                Grid.Row="0" Grid.Column="0" FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
 
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
@@ -125,7 +113,7 @@ FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.
                                                 <TextBlock Text="{Binding SelectedItem.Content, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ComboBox}}}"/>
                                                 <Path x:Name="Arrow" Grid.Column="1" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 Z"/>
                                             </Grid>
-                                            
+
                                         </ToggleButton>
                                         <Popup x:Name="Popup" Placement="Bottom" Focusable="False" AllowsTransparency="True" IsOpen="{TemplateBinding IsDropDownOpen}" PopupAnimation="Slide">
                                             <Grid Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
@@ -173,7 +161,7 @@ FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.
         </DataGrid>
 
         <!-- Contenido de la primera fila y tercera columna -->
-        <Grid Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF80B198" Height="92" Width="210">
+        <Grid Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF80B198" Height="90" Width="266">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"/>
                 <RowDefinition Height="1*"/>
@@ -186,21 +174,17 @@ FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.
             <TextBlock Text="Buscar producto" Grid.Row="0" Style="{StaticResource PoppinsFontBold}" Foreground="White" Margin="5,0,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="20"></TextBlock>
             <TextBox x:Name="txtBuscar" Grid.Row="1" Grid.Column="0" Width="100" Height="20" Style="{StaticResource PlaceholderTextBoxStyle}" 
          Tag="Buscar nombre..." Grid.ColumnSpan="2" Margin="10,20,100,21"></TextBox>
-            <!-- <Button Name="btnBuscar" Click="btnBuscar_Click" Grid.Row="1" Grid.Column="1" Content="Buscar" Margin="19,15,19,16"/>-->
 
             <Button Name="btnBuscar" 
-                    Click="btnBuscar_Click" Grid.Row="1" Grid.Column="1" Content="Buscar" Margin="15,12,14,13"
-Foreground="Black"
-Background="White"
-FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
+                    Click="btnBuscar_Click" Grid.Row="1" Grid.Column="1" Content="Buscar" Margin="15,12,14,13" Foreground="Black" Background="White" 
+                    FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
 
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border x:Name="LoginBorder" Background="{TemplateBinding Background}"
-                        CornerRadius="16">
+                                    <Border x:Name="LoginBorder" Background="{TemplateBinding Background}" CornerRadius="16">
                                         <ContentPresenter HorizontalAlignment="Center" 
                                       VerticalAlignment="Center"/>
                                     </Border>
