@@ -326,5 +326,23 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.DB
 
             conexion.Close();
         }
+
+
+        public static void agregarCliente(String nombre_cliente, String email, String telefono)
+        {
+            conexion.Open();
+
+            String consulta = "INSERT INTO clientes (nombre_cliente, email, telefono) VALUES (@Nombre, @Email, @Telefono);";
+
+            MySqlCommand mySqlCommand = new MySqlCommand(consulta, conexion);
+
+            mySqlCommand.Parameters.AddWithValue("@Nombre", nombre_cliente);
+            mySqlCommand.Parameters.AddWithValue("@Email", email);
+            mySqlCommand.Parameters.AddWithValue("@Telefono", telefono);
+
+            mySqlCommand.ExecuteNonQuery();
+
+            conexion.Close();
+        }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EmilioOrdunaPena_ProyectoFinal2EV"
         mc:Ignorable="d"
     Icon="/Media/logo.png"
-    Title="Agregar registro" Height="241" Width="1512">
+    Title="Agregar producto" Height="241" Width="1512">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>

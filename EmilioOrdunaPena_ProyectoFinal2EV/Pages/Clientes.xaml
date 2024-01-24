@@ -9,8 +9,75 @@
       Title="Clientes">
 
     <Grid Background="White">
-        <DataGrid x:Name="tablaClientes" AutoGenerateColumns="True" BorderThickness="3" BorderBrush="#FF80B198" Style="{StaticResource PoppinsFontRegular}" IsReadOnly="True">
-            <!-- Contenido del DataGrid -->
-        </DataGrid>
+        <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <Button VerticalAlignment="Center" Grid.Column="0" x:Name="btnAgregarCliente" Click="btnAgregarCliente_Click" Content="Agregar cliente"  Foreground="White" Background="#FF80B198" Margin="0,25" Height="35" Width="250"
+            FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="LoginBorder" Background="{TemplateBinding Background}"
+            CornerRadius="16">
+                                            <ContentPresenter HorizontalAlignment="Center" 
+                          VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#7ba85e" TargetName="LoginBorder"  />
+                                                <Setter Property="TextBlock.Foreground" Value="Black"  TargetName="LoginBorder" />
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button VerticalAlignment="Center" Grid.Column="1" x:Name="btnRecargarClientes" Click="btnRecargarClientes_Click" Content="↻"  Foreground="White" Background="#FF80B198" Margin="0,25" Height="35" Width="100"
+FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-ExtraBold.ttf#Poppins" FontSize="25">
+
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="LoginBorder" Background="{TemplateBinding Background}"
+CornerRadius="100">
+                                            <ContentPresenter HorizontalAlignment="Center" 
+              VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#7ba85e" TargetName="LoginBorder"  />
+                                                <Setter Property="TextBlock.Foreground" Value="Black"  TargetName="LoginBorder" />
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+            
+
+            <DataGrid VerticalAlignment="Center" x:Name="tablaClientes" AutoGenerateColumns="True" BorderThickness="3" BorderBrush="#FF80B198" Style="{StaticResource PoppinsFontRegular}" IsReadOnly="True">
+                <!-- Contenido del DataGrid -->
+            </DataGrid>
+        </StackPanel>
     </Grid>
+    
 </Page>

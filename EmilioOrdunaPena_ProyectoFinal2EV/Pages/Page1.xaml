@@ -55,7 +55,7 @@
         </Grid.ColumnDefinitions>
 
         <Button x:Name="btnAgregarRegistro" 
-                Click="btnAgregarRegistro_Click" Content="Agregar registro"  Foreground="White" Background="#FF80B198" Margin="0,25" Height="35" Width="250"
+                Click="btnAgregarRegistro_Click" Content="Agregar producto"  Foreground="White" Background="#FF80B198" Margin="0,25" Height="35" Width="250"
                 Grid.Row="0" Grid.Column="0" FontFamily="/EmilioOrdunaPena_ProyectoFinal2EV;component/Fonts/Poppins-SemiBold.ttf#Poppins">
 
             <Button.Style>
