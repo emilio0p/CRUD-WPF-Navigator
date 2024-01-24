@@ -111,10 +111,10 @@
 
 
 
-        <!-- Contenido de la primera fila y segunda columna -->
+        
         <DataGrid x:Name="tablaProductos2" AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" 
-                  Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198" IsReadOnly="True">
-            <!-- Contenido del DataGrid -->
+                  Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198" IsReadOnly="True" Style="{StaticResource PoppinsFontRegular}">
+            <!-- El contenido del DataGrid se llenará automáticamente gracias a los métodos establecidos -->
         </DataGrid>
 
         

@@ -156,7 +156,7 @@
 
         <!-- Contenido de la primera fila y segunda columna -->
         <DataGrid x:Name="tablaProductos" AutoGenerateColumns="True" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" 
-                  Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198" SelectionChanged="tablaProductos_SelectionChanged" IsReadOnly="True">
+                  Grid.ColumnSpan="3"  BorderThickness="3" BorderBrush="#FF80B198" SelectionChanged="tablaProductos_SelectionChanged" Style="{StaticResource PoppinsFontRegular}" IsReadOnly="True">
             <!-- Contenido del DataGrid -->
         </DataGrid>
 
@@ -191,7 +191,7 @@
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
                                             <Setter Property="Background" Value="#7ba85e" TargetName="LoginBorder"  />
-                                            <Setter Property="TextBlock.Foreground" Value="Black"  TargetName="LoginBorder" />
+                                            <Setter Property="TextBlock.Foreground" Value="White"  TargetName="LoginBorder" />
                                             <Setter Property="Cursor" Value="Hand"/>
                                         </Trigger>
                                     </ControlTemplate.Triggers>

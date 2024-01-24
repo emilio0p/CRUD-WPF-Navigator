@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmilioOrdunaPena_ProyectoFinal2EV.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
         public Clientes()
         {
             InitializeComponent();
+            Database.rellenarTablaClientes(tablaClientes);
         }
     }
 }
