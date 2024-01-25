@@ -85,7 +85,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EmilioOrdunaPena_ProyectoFinal2EV;component/addcliente.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EmilioOrdunaPena_ProyectoFinal2EV;V1.0.0.0;component/addcliente.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddCliente.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

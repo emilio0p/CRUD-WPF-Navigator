@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmilioOrdunaPena_ProyectoFinal2EV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1222e8a345dc4c9c980a4b217aaa5cf1113c6418")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbd56b82e1d0868fbf728ef2fb425178c7a4a220")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmilioOrdunaPena_ProyectoFinal2EV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmilioOrdunaPena_ProyectoFinal2EV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
