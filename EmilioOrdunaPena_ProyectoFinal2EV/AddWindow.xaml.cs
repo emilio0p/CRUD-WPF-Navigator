@@ -22,9 +22,12 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
     /// </summary>
     public partial class AddWindow : Window
     {
-        public AddWindow()
+
+        private int numCat;
+        public AddWindow(int numCat)
         {
             InitializeComponent();
+            this.numCat = numCat;
         }
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
@@ -42,6 +45,13 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV
             {
                 MessageBox.Show("La categoría debe ser un número entero.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
+            } else
+            {
+                if(!(int.Parse(txtCategoria.Text)<=numCat && int.Parse(txtCategoria.Text) >= 1))
+                {
+                    MessageBox.Show("La categoría debe estar entre 1 y " + numCat + ".", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
             }
 
             // Validar la imagen: una cadena no vacía

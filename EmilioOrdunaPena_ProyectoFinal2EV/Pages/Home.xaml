@@ -8,9 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home" Background="White">
 
-    <Grid Background="White" VerticalAlignment="Center" HorizontalAlignment="Center">
-
-        <TextBlock x:Name="txtBienvenida" Text="Bienvenido/a " Style="{StaticResource PoppinsFontBold}" FontSize="20"></TextBlock>
-
+    <Grid Background="White">
+        <!-- Cuadrado con esquinas redondeadas y fondo verde -->
+        <Border Width="600" Height="350" Background="#7ba97e" CornerRadius="15" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Contenedor de los textos -->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+                <TextBlock Foreground="White" x:Name="txtBienvenida" Text="Bienvenido/a " Style="{StaticResource PoppinsFontBold}" FontSize="20" Margin="0 0 0 10"></TextBlock>
+                <TextBlock Foreground="White" Text="a la aplicación de gestión de la base de datos de TIRADEPAPEL. Aquí podrás administrar eficientemente todos los datos relacionados con nuestros productos y clientes. Si tienes alguna pregunta o necesitas ayuda, no dudes en ponerte en contacto con nuestro equipo de soporte." TextWrapping="Wrap" Style="{StaticResource PoppinsFontSemiBold}" FontSize="18" Margin="0 0 0 10"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>

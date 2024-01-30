@@ -23,6 +23,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
     /// </summary>
     public partial class Page1 : Page
     {
+        private int numCat;
         public Page1()
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
             List<String> lista = new List<String>();
 
             lista = DB.Database.obtenerCategorias();
+            numCat = lista.Count;
 
             for (int i = 0; i < lista.Count; i++) {
                 ComboBoxItem cm = new ComboBoxItem();
@@ -94,7 +96,7 @@ namespace EmilioOrdunaPena_ProyectoFinal2EV.Pages
 
         private void btnAgregarRegistro_Click(object sender, RoutedEventArgs e)
         {
-            AddWindow addWindow = new AddWindow();
+            AddWindow addWindow = new AddWindow(numCat);
             addWindow.ShowDialog();
         }
     }
